@@ -1,0 +1,77 @@
+import delimited "/path/Summary_chr1.txt", encoding(ISO-8859-1)
+
+keep if eaf > 0.01
+
+keep if r2_oncoarray > 0.8
+
+di 17315425-250000
+
+di 17315425+250000
+
+keep if position > 17065425
+
+keep if position < 17565425
+
+gen log = -log10(overall_pvalue)
+
+graph twoway (scatter log position) (scatter log position if position == 17315425)
+
+clear
+
+import delimited "/path/Summary_chr1.txt", encoding(ISO-8859-1)
+
+keep if eaf > 0.01
+
+keep if r2_oncoarray > 0.8
+
+di 107678268-250000
+
+di 107678268+250000
+
+keep if position > 107428268
+
+keep if position < 107928268
+
+gen log = -log10(overall_pvalue)
+
+graph twoway (scatter log position) (scatter log position if position == 107678268)
+
+clear
+
+import delimited "/path/Summary_chr14.txt", encoding(ISO-8859-1)
+
+keep if eaf > 0.01
+
+keep if r2_oncoarray > 0.8
+
+di 101176335-250000
+
+di 101176335+250000
+
+keep if position > 100926335
+
+keep if position < 101426335
+
+gen log = -log10(overall_pvalue)
+
+graph twoway (scatter log position) (scatter log position if position == 101176335)
+
+clear
+
+import delimited "/path/Summary_chr9.txt", encoding(ISO-8859-1)
+
+keep if eaf > 0.01
+
+keep if r2_oncoarray > 0.8
+
+di 136137065-250000
+
+di 136155000+250000
+
+keep if position > 135887065
+
+keep if position < 136405000
+
+gen log = -log10(overall_pvalue)
+
+graph twoway (scatter log position) (scatter log position if position == 136155000) (scatter log position if position == 136149711) (scatter log position if position == 136138765) (scatter log position if position == 136141870) (scatter log position if position == 136149399) (scatter log position if position == 136139907) (scatter log position if position == 136137065) (scatter log position if position == 136146597) (scatter log position if position == 136145404) (scatter log position if position == 136149229)
