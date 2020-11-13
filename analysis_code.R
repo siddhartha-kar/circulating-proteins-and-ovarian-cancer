@@ -18,6 +18,8 @@ chr1x <- inner_join(st4_4, chr1, by = c("Chromosome","Position"))
 
 d <- bind_rows(chr1x,chr2x,chr3x,chr4x,chr5x,chr6x,chr7x,chr8x,chr9x,chr10x,chr11x,chr12x,chr13x,chr14x,chr15x,chr16x,chr17x,chr18x,chr19x,chr20x,chr21x,chr22x)
 
+# for tibble d, please see file interval_ocac.txt in this repository.
+
 d1 <- d %>% filter(EAF.y > 0.01)
 
 d2 <- d1 %>% filter(R2_oncoarray > 0.8)
